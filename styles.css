@@ -68,11 +68,14 @@ ul.link-list {
 }
 
 button {
+    cursor: pointer;
     flex: 0 1 auto;
-    padding: 10px 32px;
+    padding: 8px 32px;
     margin: 0;
     border: 0;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -80,6 +83,24 @@ button {
     color: var(--color-white);
     font-size: 18px;
     font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover {
+    border: 2px solid var(--color-white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid var(--color-white);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-white);
+    color: var(--color-btn);
 }
 
 img {
@@ -229,8 +250,39 @@ header .link-list a {
 }
 
 /* Call to Action */
+.call-to-action .body-container {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+}
 
+.call-to-action .content {
+    color: var(--color-white);
+    background-color: var(--color-btn);
+    padding: 52px 112px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
 
+.call-to-action .content .text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.call-to-action .content .title {
+    font-size: 20px;
+}
+
+.call-to-action .content .description {
+    font-size: 18px;
+}
+
+.call-to-action button {
+    flex: 0 1 auto;
+}
 
 /* Footer */
 
